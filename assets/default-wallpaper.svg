@@ -27,27 +27,14 @@
       <stop offset="0.72" stop-color="#88C6BC" stop-opacity="0.10"/>
       <stop offset="1" stop-color="#88C6BC" stop-opacity="0"/>
     </linearGradient>
-    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="74"/>
-    </filter>
-    <filter id="ribbonBlur" x="-20%" y="-30%" width="140%" height="160%">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
-    <filter id="grain">
-      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="11"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer>
-        <feFuncA type="table" tableValues="0 0.055"/>
-      </feComponentTransfer>
-    </filter>
   </defs>
 
   <rect width="2560" height="1600" fill="url(#base)"/>
-  <ellipse cx="510" cy="1190" rx="720" ry="610" fill="url(#greenGlow)" filter="url(#softBlur)"/>
-  <ellipse cx="2140" cy="380" rx="720" ry="560" fill="url(#warmGlow)" filter="url(#softBlur)"/>
-  <ellipse cx="1930" cy="1430" rx="760" ry="570" fill="url(#coolGlow)" filter="url(#softBlur)"/>
+  <ellipse cx="510" cy="1190" rx="720" ry="610" fill="url(#greenGlow)"/>
+  <ellipse cx="2140" cy="380" rx="720" ry="560" fill="url(#warmGlow)"/>
+  <ellipse cx="1930" cy="1430" rx="760" ry="570" fill="url(#coolGlow)"/>
 
-  <g opacity="0.72" filter="url(#ribbonBlur)">
+  <g opacity="0.72">
     <path d="M-220 1170 C360 700 770 930 1100 620 C1450 290 1900 390 2780 120"
           fill="none" stroke="url(#ribbon)" stroke-width="190"/>
     <path d="M-160 1420 C520 1030 860 1260 1280 900 C1610 615 2050 680 2730 480"
@@ -64,5 +51,4 @@
            C1140 955 810 965 575 835 C340 705 220 490 350 210 Z"
         fill="#D4F1B5" fill-opacity="0.035" stroke="#E6FFD2" stroke-opacity="0.055" stroke-width="2"/>
 
-  <rect width="2560" height="1600" filter="url(#grain)" opacity="0.85"/>
 </svg>
