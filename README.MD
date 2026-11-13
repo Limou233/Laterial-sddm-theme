@@ -8,8 +8,8 @@ Laterial 是面向 KDE Plasma 6 / SDDM Qt 6 的 Material 3 Expressive 登录主�
 
 运行 `bash tools/package.sh` 会生成可直接交给 Plasma 6“登录屏幕 (SDDM)”加载的正式版文件：
 
-- `release/Laterial-1.0.0.tar.gz`
-- `release/Laterial-1.0.0.zip`
+- `release/Laterial-alpha1.0.tar.gz`
+- `release/Laterial-alpha1.0.zip`
 - `release/laterial/`：未归档、可直接部署到 `/usr/share/sddm/themes/laterial`
 - `release/SHA256SUMS`
 

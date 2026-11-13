@@ -4,7 +4,7 @@ set -euo pipefail
 theme_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 release_dir="$theme_dir/release"
 stage_dir="$release_dir/laterial"
-package_name="Laterial-1.0.0"
+package_name="Laterial-alpha1.0"
 
 if [[ "$stage_dir" != "$release_dir/laterial" ]]; then
     echo "Refusing to package into an unexpected path." >&2
