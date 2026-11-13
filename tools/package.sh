@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ "${1:-}" != "--confirm-release" ]]; then
+    echo "Release generation is disabled by default. Obtain explicit user approval, then run:" >&2
+    echo "  bash tools/package.sh --confirm-release" >&2
+    exit 2
+fi
+
 theme_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 release_dir="$theme_dir/release"
 stage_dir="$release_dir/laterial"

@@ -4,9 +4,17 @@
 
 Laterial 是面向 KDE Plasma 6 / SDDM Qt 6 的 Material 3 Expressive 登录主题。它只依赖 Qt Quick 6，不依赖 Plasma 桌面 QML 组件，因此能在 greeter 的独立进程中运行。
 
-## 正式版安装包
+## 主题安装包
 
-运行 `bash tools/package.sh` 会生成可直接交给 Plasma 6“登录屏幕 (SDDM)”加载的正式版文件：
+`release/` 是生成输出并且不纳入 Git。除非维护者明确批准，不要生成发布文件。
+
+获得批准后运行：
+
+```bash
+bash tools/package.sh --confirm-release
+```
+
+命令会生成可直接交给 Plasma 6“登录屏幕 (SDDM)”加载的文件：
 
 - `release/Laterial-alpha1.0.tar.gz`
 - `release/Laterial-alpha1.0.zip`
@@ -46,7 +54,7 @@ Laterial-sddm-theme/
 ├── components/        # M3E 控件、主题色、背景与大时钟
 ├── js/                # 色彩生成与壁纸取样
 ├── assets/            # 原创默认壁纸 SVG
-├── tools/package.sh   # 正式安装包生成
+├── tools/package.sh   # 需明确批准后生成安装包
 ├── metadata.desktop
 └── theme.conf
 ```
@@ -177,10 +185,10 @@ animationsEnabled=true
 
 ```bash
 cd Laterial-sddm-theme
-bash tools/package.sh
+bash tools/package.sh --confirm-release
 ```
 
-打包脚本会检查元数据、运行一次 `sddm-greeter-qt6 --test-mode` 加载检查，然后生成 `release/` 下的 KDE 主题归档。它不会修改系统当前主题。
+只有在维护者明确批准发布时才能执行上述命令。打包脚本会检查元数据、运行一次 `sddm-greeter-qt6 --test-mode` 加载检查，然后生成 `release/` 下的 KDE 主题归档；它不会修改系统当前主题。
 
 ## 兼容性说明
 
