@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1600" viewBox="0 0 2560 1600">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15251f"/>
+      <stop offset="0.46" stop-color="#101816"/>
+      <stop offset="1" stop-color="#090d0c"/>
+    </linearGradient>
+    <radialGradient id="greenGlow">
+      <stop offset="0" stop-color="#9DDF80" stop-opacity="0.88"/>
+      <stop offset="0.34" stop-color="#5A9A58" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1A3F34" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmGlow">
+      <stop offset="0" stop-color="#F1C38A" stop-opacity="0.64"/>
+      <stop offset="0.48" stop-color="#A96D55" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#603542" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coolGlow">
+      <stop offset="0" stop-color="#8AC8C8" stop-opacity="0.58"/>
+      <stop offset="0.54" stop-color="#366C72" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#1A353C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D5F6AE" stop-opacity="0"/>
+      <stop offset="0.38" stop-color="#D5F6AE" stop-opacity="0.18"/>
+      <stop offset="0.72" stop-color="#88C6BC" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#88C6BC" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="74"/>
+    </filter>
+    <filter id="ribbonBlur" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.055"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="2560" height="1600" fill="url(#base)"/>
+  <ellipse cx="510" cy="1190" rx="720" ry="610" fill="url(#greenGlow)" filter="url(#softBlur)"/>
+  <ellipse cx="2140" cy="380" rx="720" ry="560" fill="url(#warmGlow)" filter="url(#softBlur)"/>
+  <ellipse cx="1930" cy="1430" rx="760" ry="570" fill="url(#coolGlow)" filter="url(#softBlur)"/>
+
+  <g opacity="0.72" filter="url(#ribbonBlur)">
+    <path d="M-220 1170 C360 700 770 930 1100 620 C1450 290 1900 390 2780 120"
+          fill="none" stroke="url(#ribbon)" stroke-width="190"/>
+    <path d="M-160 1420 C520 1030 860 1260 1280 900 C1610 615 2050 680 2730 480"
+          fill="none" stroke="#C9F0BC" stroke-opacity="0.055" stroke-width="58"/>
+  </g>
+
+  <g fill="none" stroke="#E7FFD4">
+    <circle cx="1815" cy="760" r="420" stroke-opacity="0.045" stroke-width="2"/>
+    <circle cx="1815" cy="760" r="520" stroke-opacity="0.032" stroke-width="2"/>
+    <circle cx="1815" cy="760" r="635" stroke-opacity="0.022" stroke-width="2"/>
+  </g>
+
+  <path d="M350 210 C640 70 970 110 1210 340 C1350 470 1375 630 1270 775
+           C1140 955 810 965 575 835 C340 705 220 490 350 210 Z"
+        fill="#D4F1B5" fill-opacity="0.035" stroke="#E6FFD2" stroke-opacity="0.055" stroke-width="2"/>
+
+  <rect width="2560" height="1600" filter="url(#grain)" opacity="0.85"/>
+</svg>

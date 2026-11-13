@@ -1,0 +1,21 @@
+# Local Plasma/SDDM overrides
+theme.conf.user
+
+# Only the original default wallpaper SVG is tracked.
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.avif
+
+# Development tests, local previews and tooling caches
+dev/
+*.log
+*.qmlc
+*.jsc
+.qmlcache/
+
+# Generated KDE packages are recreated by tools/package.sh
+release/

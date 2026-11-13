@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=Laterial
+Name[zh_CN]=Laterial 材质登录
+Description=Material 3 Expressive SDDM theme with wallpaper-derived color
+Description[zh_CN]=采用 Material 3 Expressive 与壁纸取色的 SDDM 主题
+Author=limou233
+Copyright=(c) 2026 limou233
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.0.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=laterial
+Theme-API=2.0
+QtVersion=6
